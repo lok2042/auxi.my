@@ -82,7 +82,7 @@ git push origin feature/your-feature-name
 
 ## Feedback and Support
 
-If you have any feedback, suggestions, or need support regarding auxi.my, please reach out to us at [support@auxi.my](mailto:support@auxi.my). We value your input and are dedicated to continuously improving our platform.
+If you have any feedback, suggestions, or need support regarding auxi.my, please reach out to us at [support@auxi.my](mailto:auxi.my001@gmail.com). We value your input and are dedicated to continuously improving our platform.
 
 
 Thank you for your interest in auxi.my! We hope our platform assists you in achieving your academic goals.
