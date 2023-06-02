@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - auxi.my</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style/about.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/red_chevron.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div w3-include-html="../components/header.html"></div>
+    <main>
+      <section class="section-feature clearfix">
+        <div class="row">
+          <h2>About Us</h2>
+          <p class="long-copy" style="text-align: center">
+            Empowering Students, Supporting Helpers
+          </p>
+        </div>
+        <div class="row">
+          <h3>Mission</h3>
+          <p class="long-copy">
+            To empower students and assignment helpers in the gig economy
+            through a collaborative crowdsourcing platform. We aim to provide a
+            supportive and inclusive environment where students can access
+            high-quality academic assistance, and assignment helpers can
+            showcase their expertise and thrive in the gig economy. Our platform
+            is dedicated to facilitating knowledge sharing, fostering academic
+            growth, and promoting the professional success of assignment
+            helpers, while enabling students to excel in their academic
+            pursuits.
+          </p>
+        </div>
+        <div class="row">
+          <h3>Vision</h3>
+          <p class="long-copy">
+            We envision a future where education and the gig economy intersect
+            seamlessly. We strive to be the leading collaborative crowdsourcing
+            platform that revolutionizes the way students learn and assignment
+            helpers leverage their skills in the gig economy. Through our
+            innovative technology and vibrant community, we aim to create a
+            global network that connects students with talented assignment
+            helpers, enabling seamless collaboration, academic excellence, and
+            professional growth. Together, we aspire to transform the gig
+            economy landscape and make a positive impact on the lives of
+            students and assignment helpers around the world, fostering a future
+            where education and gig opportunities thrive harmoniously.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div w3-include-html="../components/footer.html"></div>
+  </body>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+    includeHTML();
+  </script>
+</html>

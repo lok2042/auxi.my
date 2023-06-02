@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs - auxi.my</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/red_chevron.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div w3-include-html="../components/header.html"></div>
+    <main>
+      <section class="section-feature clearfix">
+        <div class="row">
+          <h2>FAQs</h2>
+          <p class="long-copy" style="text-align: center">
+            Frequently Asked Questions
+          </p>
+        </div>
+        <div class="row">
+          <ol class="content-list">
+            <li>
+              <h4>What is auxi.my?</h4>
+              <p>
+                auxi.my is a mobile app that serves as a collaborative
+                crowdsourcing platform, allowing users to crowdsource their
+                assignments and homework. It connects students who need
+                assistance with knowledgeable helpers who can assist and guide
+                them towards their goals.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>How does auxi.my work?</h4>
+              <p>
+                auxi.my works by leveraging the collective knowledge and
+                expertise of its user community. Users who require assignment
+                help first post their assignment requests, and users with
+                relevant expertise will bid to obtain the assignment. The
+                requesting users can chat with the bidders using our in-app chat
+                or externally (WhatsApp, Telegram, Signal, etc) through the
+                bidders' provided contact number. Ultimately, the decision lies
+                solely on the requester to choose who can perform the task.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>
+                Is auxi.my available as a mobile app or only as a web platform?
+              </h4>
+              <p>
+                auxi.my is ONLY available for Android devices and downloadable
+                from Google Play Store only at this moment. In the future, auxi
+                will expand to include iOS devices and available as a web app.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>Can I use auxi.my for all subjects and academic levels?</h4>
+              <p>
+                Yes, auxi.my supports a wide range of subjects and academic
+                levels, including math, science, humanities, languages, computer
+                science, enginnering and many more. It caters to students from
+                schools through university and beyond.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>Is auxi.my a free platform?</h4>
+              <p>
+                Yes, auxi.my offers a free platform to connect users needing
+                help and user looking for extra income. However, we do offer Pro
+                membership that unlocks additional premium features for enhanced
+                functionality and ads-less experience.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>How can I sign up for auxi.my?</h4>
+              <p>
+                To sign up for auxi.my, you can download the mobile app from
+                Google Play Store. You will need to provide some basic
+                information and create an account to get started.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>Is my personal information secure on auxi.my?</h4>
+              <p>
+                Yes, auxi.my takes user privacy and data security seriously. We
+                employ strict measures to safeguard your personal information
+                and ensure confidentiality. We adhere to industry-standard
+                security protocols to protect user data.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>
+                Can I choose the expert or user who helps me with my assignment?
+              </h4>
+              <p>
+                While auxi.my does not offer direct selection of specific
+                experts or users, the platform notifies relevant users with
+                expertise in the subject area of your assignment request. They
+                can choose to volunteer and assist you based on their
+                availability and interest.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>Can I earn money by helping others on auxi.my?</h4>
+              <p>
+                Yes, auxi.my provides an opportunity for knowledgeable users to
+                earn income by assisting students with their assignments. By
+                leveraging your expertise, you can contribute to the auxi
+                community while earning compensation for your assistance.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>
+                What if I have a technical issue or need support while using
+                auxi.my?
+              </h4>
+              <p>
+                If you encounter any technical issues or require support while
+                using auxi, send us an email at
+                <a href="auxi.my001@gmail.com">auxi.my001@gmail.com</a>, and we
+                will promptly address your concerns and provide guidance.
+              </p>
+              <br />
+            </li>
+            <li>
+              <h4>In the event of a dispute, how can I resolve it?</h4>
+              <p>
+                Please note that auxi.my acts solely as a platform to connect
+                students with helpers, and we do not process any payments or
+                have direct involvement in transactions between users. We do not
+                take any cut or commision in all transactions. In the event of a
+                dispute, we encourage users to communicate and resolve the issue
+                directly with each other. We recommend open and respectful
+                dialogue to address any concerns or misunderstandings. If a
+                resolution cannot be reached, we suggest seeking mediation or
+                arbitration services that are appropriate for your jurisdiction
+                or seeking legal advice if necessary. Please refer to our terms
+                of service for more information on user responsibilities and
+                dispute resolution.
+              </p>
+              <br />
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+    <div w3-include-html="../components/footer.html"></div>
+  </body>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+    includeHTML();
+  </script>
+</html>

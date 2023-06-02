@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Guidelines - auxi.my</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/red_chevron.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div w3-include-html="../components/header.html"></div>
+    <main>
+      <section class="section-feature clearfix">
+        <div class="row">
+          <h2>Community Guidelines</h2>
+          <p class="long-copy" style="text-align: justify">
+            We're dedicated to creating a collaborative and respectful community
+            where students and assignment helpers can connect and work together.
+            To ensure a positive and productive experience for everyone, we have
+            established the following community guidelines.
+          </p>
+        </div>
+        <div class="row">
+          <ol class="content-list">
+            <li>
+              <b>Respect and Professionalism</b>
+              <ul>
+                <li>
+                  Treat all members with respect and professionalism, regardless
+                  of their role or background.
+                </li>
+                <li>
+                  Refrain from using offensive, abusive, or discriminatory
+                  language.
+                </li>
+                <li>
+                  Avoid personal attacks or harassment towards other members.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Academic Integrity</b>
+              <ul>
+                <li>Promote academic integrity and originality.</li>
+                <li>
+                  Do not use the platform for plagiarism or any form of
+                  cheating.
+                </li>
+                <li>
+                  Seek assistance and guidance while maintaining the integrity
+                  of your work
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Clear Communication</b>
+              <ul>
+                <li>
+                  Clearly communicate the requirements and expectations of the
+                  assignment or project.
+                </li>
+                <li>
+                  Assignment helpers should provide a detailed proposal,
+                  outlining their approach and deliverables.
+                </li>
+                <li>
+                  Students should clearly articulate their requirements and
+                  provide necessary materials to helpers.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Legal and Ethical Conduct</b>
+              <ul>
+                <li>
+                  Do not exchange copyrighted material, including textbooks,
+                  software, or any other protected content.
+                </li>
+                <li>
+                  Ensure that assignments do not involve any illegal activities,
+                  encourage harm, or violate any laws or regulations.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Confidentiality and Privacy</b>
+              <ul>
+                <li>Respect the confidentiality and privacy of all members.</li>
+                <li>
+                  Helpers should not disclose any personal or sensitive
+                  information provided by students.
+                </li>
+                <li>
+                  Students should not share personal information or confidential
+                  data that is not necessary for the completion of the task.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Fair Bidding and Pricing</b>
+              <ul>
+                <li>Encourage fair competition among assignment helpers.</li>
+                <li>
+                  Bids should be based on the complexity, length, and
+                  requirements of the assignment.
+                </li>
+                <li>
+                  Avoid bid manipulation or collusion to gain an unfair
+                  advantage.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Quality Assurance and Accountability</b>
+              <ul>
+                <li>
+                  Strive to deliver high-quality work and meet the agreed-upon
+                  deadlines.
+                </li>
+                <li>
+                  Provide constructive feedback to helpers and report any issues
+                  promptly.
+                </li>
+                <li>
+                  Take responsibility for the work you deliver and address any
+                  concerns raised by students.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Platform Use and Abuse</b>
+              <ul>
+                <li>
+                  Do not engage in spamming, unauthorized advertising, or
+                  solicitation on the platform.
+                </li>
+                <li>
+                  Report any abuse, misuse, or suspicious activities to the auxi
+                  team promptly.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Compliance with Terms of Service</b>
+              <ul>
+                <li>Adhere to the platform's terms of service and policies.</li>
+                <li>
+                  Violations of the guidelines or terms may result in warnings,
+                  suspension, or termination of accounts.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Continuous Improvement</b>
+              <ul>
+                <li>
+                  We value your feedback and suggestions to improve the platform
+                  and our guidelines.
+                </li>
+                <li>
+                  Regularly review and update the guidelines to address emerging
+                  issues and challenges.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+    <div w3-include-html="../components/footer.html"></div>
+  </body>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+    includeHTML();
+  </script>
+</html>

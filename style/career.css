@@ -1,0 +1,72 @@
+.banner-text {
+  position: absolute;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  top: 30%;
+  left: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  width: 100%;
+}
+
+.car-header h1 {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.car-header p {
+  font-size: 0.875em;
+  line-height: 1.8;
+  width: 50%;
+  padding-top: 20px;
+  margin: auto;
+}
+
+.benefits {
+  display: block;
+}
+
+.benefits h3 {
+  color: #fff;
+  font-size: 1em;
+}
+
+ul.ul-benefits {
+  list-style-type: none;
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  max-width: 90%;
+}
+
+ul.ul-benefits li {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  max-width: 100%;
+  width: 20em;
+  float: left;
+  border-radius: 10px;
+}
+
+ul.ul-benefits img {
+  padding-right: 10px;
+  float: left;
+}
+
+ul.ul-benefits p {
+  font-size: 0.75em;
+  line-height: 1.5;
+}
+
+ul.ul-benefits h3 {
+  margin-bottom: 10px;
+}
