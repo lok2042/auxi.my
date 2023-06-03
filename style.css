@@ -279,18 +279,6 @@ ul.secondary-nav li a:active {
   color: #f44336;
 }
 
-/* create right white border */
-/* ul.main-nav li:nth-of-type(3)::after {
-	display: inline-block;
-	content: " ";
-	width: 1px;
-	height: 18px;
-	margin-left: 15px ;
-	margin-right: 10px ;
-	vertical-align: middle;
-	background-color: #f1f1f1;
-} */
-
 /* user profile image */
 img.profile-img {
   display: inline-block;
@@ -648,7 +636,7 @@ textarea {
 /* FOOTER */
 /* --------------------------------- */
 footer {
-  padding: 40px 0;
+  padding: 40px 30px;
   background-color: #f1f1f1;
   color: black;
 }
@@ -725,4 +713,89 @@ footer ul li a:active {
 
 .content-list li {
   margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 250%;
+  }
+
+  h2 {
+    font-size: 150%;
+  }
+
+  .row {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  .col-4,
+  .col-3,
+  .col-2,
+  .col-75 {
+    width: 100%;
+    float: none;
+    text-align: justify;
+    margin: 0px auto;
+  }
+
+  .long-copy,
+  .box p {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .btn-full,
+  .btn-ghost,
+  input[type="submit"] {
+    margin-right: 0;
+    display: block;
+    margin: 10px auto;
+  }
+
+  header {
+    height: auto;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: static;
+    transform: none;
+  }
+
+  header p {
+    margin-bottom: 20px;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .mockup-img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .plan-box-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .plan-box {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  form {
+    width: 100%;
+  }
 }
