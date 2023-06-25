@@ -2,6 +2,8 @@
 
 Welcome to the auxi.my! auxi.my is a mobile app that serves as a collaborative crowdsourcing platform, designed to connect students who need assistance with knowledgeable helpers who can guide them towards their academic goals. This README.md file provides an overview of the project and instructions for setting up the auxi's webpages (for marketing purposes) on GitHub Pages.
 
+URL: [auxi.my](https://lok2042.github.io/auxi.my/)
+
 ## Overview
 
 auxi.my leverages the collective knowledge and expertise of its user community to facilitate the sharing and completion of assignments and homework. The platform operates on a bidding system, where users who require assignment help can post their requests. Users with relevant expertise can then bid to obtain the assignment.
